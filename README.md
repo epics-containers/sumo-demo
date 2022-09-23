@@ -7,4 +7,9 @@ support module and pmac generic IOC using sumo.
 Note that the system requirements for the above must be installed. To 
 get these you could use this container:
 
+```
 podman run -it ghcr.io/epics-containers/ioc-pmac-linux-developer:dev
+# inside the container do:
+pip install epics-sumo
+# then paste in commands from example.sh
+```
