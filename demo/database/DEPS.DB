@@ -123,6 +123,22 @@
             }
         }
     },
+    "IPAC": {
+        "R2-16": {
+            "aliases": {
+                "BASE": "EPICS_BASE"
+            },
+            "dependencies": [
+                "BASE"
+            ],
+            "source": {
+                "git": {
+                    "tag": "2.16",
+                    "url": "https://github.com/epics-modules/ipac"
+                }
+            }
+        }
+    },
     "STREAMDEVICE": {
         "R2-8-16": {
             "aliases": {
@@ -194,11 +210,26 @@
             },
             "dependencies": [
                 "BASE",
+                "BUSY",
                 "ASYN",
                 "SSCAN",
                 "CALC",
                 "MOTOR"
             ],
+            "make-recipes": {
+                "config": [
+                    "rm $DIR/configure/RELEASE.local.linux-x86_64 $DIR/configure/RELEASE.linux-x86_64.Common",
+                    "echo '\\",
+                    " BUILD_IOCS=NO\\",
+                    " CROSS_COMPILER_TARGET_ARCHS =\\",
+                    " BOOST_LIB = /usr/lib\\",
+                    " BOOST_INCLUDE = -I/usr/include\\",
+                    " SSH = /usr\\",
+                    " SSH_LIB = /usr/lib/x86_64-linux-gnu\\",
+                    " SSH_INCLUDE = -I/usr/include' > ${DIR}/configure/CONFIG_SITE.linux-x86_64.Common",
+                    "sed -i s/\\\\\\\\// ${DIR}/configure/CONFIG_SITE.linux-x86_64.Common"
+                ]
+            },
             "source": {
                 "git": {
                     "tag": "2-6-0b2",
