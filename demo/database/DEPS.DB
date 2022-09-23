@@ -1,11 +1,8 @@
 {
     "ASYN": {
         "R4-42": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "make-recipes": {
                 "config": [
@@ -22,11 +19,8 @@
     },
     "AUTOSAVE": {
         "R5-10-2": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "git": {
@@ -36,7 +30,7 @@
             }
         }
     },
-    "BASE": {
+    "EPICS_BASE": {
         "R7-0-6-1": {
             "make-recipes": {
                 "config": [
@@ -62,11 +56,8 @@
     },
     "BUSY": {
         "R1-7-2": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "git": {
@@ -78,11 +69,8 @@
     },
     "CALC": {
         "R3-7-4": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "git": {
@@ -94,11 +82,8 @@
     },
     "SEQ": {
         "R2-2-9": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "tar": {
@@ -109,11 +94,8 @@
     },
     "SSCAN": {
         "R2-11-5": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "git": {
@@ -125,11 +107,8 @@
     },
     "IPAC": {
         "R2-16": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE"
+                "EPICS_BASE"
             ],
             "source": {
                 "git": {
@@ -141,12 +120,9 @@
     },
     "STREAMDEVICE": {
         "R2-8-16": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
                 "ASYN",
-                "BASE"
+                "EPICS_BASE"
             ],
             "make-recipes": {
                 "config": [
@@ -169,11 +145,8 @@
     },
     "DEVIOCSTATS": {
         "R3-1-16": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE",
+                "EPICS_BASE",
                 "SEQ"
             ],
             "source": {
@@ -186,11 +159,8 @@
     },
     "MOTOR": {
         "R7-2-3b1": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE",
+                "EPICS_BASE",
                 "IPAC",
                 "ASYN",
                 "BUSY"
@@ -205,16 +175,12 @@
     },
     "PMAC": {
         "R2-6-0b2": {
-            "aliases": {
-                "BASE": "EPICS_BASE"
-            },
             "dependencies": [
-                "BASE",
-                "BUSY",
+                "EPICS_BASE",
                 "ASYN",
-                "SSCAN",
-                "CALC",
-                "MOTOR"
+                "BUSY",
+                "MOTOR",
+                "CALC"
             ],
             "make-recipes": {
                 "config": [
