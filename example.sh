@@ -4,10 +4,8 @@ cd $(dirname $0)
 sumo db list
 sumo db show SSCAN
 
-To 
-get these you could use this container:
-
-podman run -it ghcr.io/epics-containers/ioc-pmac-linux-developer:dev
+# To get system dependencies these you could use this container:
+# podman run -it ghcr.io/epics-containers/ioc-pmac-linux-developer:dev
 
 # I've made some intermediate builds here that are not stricly required 
 # for the container 2-level layering we could use the base2 and pmac2 build tags only
